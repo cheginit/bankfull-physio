@@ -21,7 +21,7 @@ equations for the
 The general form of the regression equations is:
 
 $$
-Y = a * A^b,
+Y = a \times A^b,
 $$
 
 where `Y` is the bankfull width or depth, `A` is the drainage area, and `a` and `b`
@@ -32,15 +32,29 @@ of the corresponding physiographic region.
 
 However, the dataset provided by Bieger et al. (2015) is not readily available
 for use in hydrological and hydraulic modeling. This repository aims to provide
-a methodology to generate a geospatial dataset for the bankfull width and depth of the CONUS using the regression equations provided by Bieger et al. (2015).
+a methodology to generate a geospatial dataset for the bankfull width and depth
+of the CONUS using the regression equations provided by Bieger et al. (2015).
 So, users can easily query the bankfull width and depth for any location in the
 CONUS using the drainage area and the coefficients of the corresponding physiographic.
 
 ## Methodology
 
 You can run `bankfull_physio.py` to reproduce the dataset. The script depends on
-`pandas`, `geopandas`, `pyogrio`, and `openpyxl` packages. Here is a brief overview
-of the methodology to generate the bankfull width and depth dataset:
+`pandas`, `geopandas`, `pyogrio`, and `openpyxl` packages that can be installed
+with `pip` or `mamba`:
+
+```bash
+pip install pandas geopandas pyogrio openpyxl
+```
+
+or
+
+```bash
+mamba install pandas geopandas-base pyogrio openpyxl
+```
+
+Here is a brief overview of the methodology to generate the bankfull width
+and depth dataset:
 
 1. From the supplementary material of Bieger et al. (2015), which is a Microsoft
    Word file, convert SUPPLEMENTARY TABLE 1 to an Excel file. Save the results
