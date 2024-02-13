@@ -6,8 +6,8 @@ be directly downloaded from this repository (`bankfull_physio.parquet`) or
 using
 [this link](https://www.hydroshare.org/resource/5d3ab5cc521344c881c38621fa3769f1/data/contents/bankfull_phyiso.parquet).
 
-For example, in Python, after installing `geopandas` and `pyarrow` you can get
-and read the file as follows:
+For example, in Python, after installing `geopandas` and `pyarrow`, you can
+download and read this GeoParquet file as follows:
 
 ```python
 import geopandas as gpd
