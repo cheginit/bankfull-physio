@@ -38,10 +38,10 @@ $$
 Y = a \times A^b,
 $$
 
-where `Y` is the bankfull width or depth, `A` is the drainage area, and `a` and `b`
-are the coefficients of the regression equation. The coefficients `a` and `b` are
+where $Y$ is the bankfull width or depth, $A$ is the upstream  drainage area, and
+$a$ and $b$ are the coefficients of the regression equation. These coefficients are
 specific to each physiographic region. Thus, bankfull width and depth can be
-estimated for any location in the CONUS using the drainage area and the coefficients
+estimated for any location in the CONUS using upstream drainage area and the coefficients
 of the corresponding physiographic region.
 
 However, the dataset provided by Bieger et al. (2015) is not readily available
