@@ -6,6 +6,19 @@ be directly downloaded from this repository (`bankfull_physio.parquet`) or
 using
 [this link](https://www.hydroshare.org/resource/5d3ab5cc521344c881c38621fa3769f1/data/contents/bankfull_phyiso.parquet).
 
+For example, in Python, you can get and read the file as follows:
+
+```python
+import geopandas as gpd
+import urllib.request
+
+url = "https://www.hydroshare.org/resource/5d3ab5cc521344c881c38621fa3769f1/data/contents/bankfull_phyiso.parquet"
+file_path = "bankfull_phyiso.parquet"
+_ = urllib.request.urlretrieve(url, file_path)
+
+bf = gpd.read_parquet(file_path)
+```
+
 ## Motivation
 
 For hydrological and hydraulic modeling, the bankfull width and depth are
@@ -40,17 +53,17 @@ CONUS using the drainage area and the coefficients of the corresponding physiogr
 ## Methodology
 
 You can run `bankfull_physio.py` to reproduce the dataset. The script depends on
-`pandas`, `geopandas`, `pyogrio`, and `openpyxl` packages that can be installed
+`pandas`, `geopandas`, `pyogrio`, `pyarrow`, and `openpyxl` packages that can be installed
 with `pip` or `mamba`:
 
 ```bash
-pip install pandas geopandas pyogrio openpyxl
+pip install pandas geopandas pyogrio pyarrow openpyxl
 ```
 
 or
 
 ```bash
-mamba install pandas geopandas-base pyogrio openpyxl
+mamba install pandas geopandas-base pyogrio pyarrow openpyxl
 ```
 
 Here is a brief overview of the methodology to generate the bankfull width
